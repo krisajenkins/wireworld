@@ -1,7 +1,9 @@
 module View exposing (root)
 
+import CDN exposing (skeleton)
 import GenericDict exposing (GenericDict)
-import Html exposing (Html, div, code, text)
+import Html exposing (Html, div, code, text, h1, h3, p, span)
+import Html.Attributes as Html
 import Svg exposing (..)
 import Svg.Attributes exposing (..)
 import Svg.Events exposing (..)
@@ -27,7 +29,19 @@ gridSizeY =
 root : Model -> Html Msg
 root model =
     div []
-        [ circuitView model.world ]
+        [ skeleton.css
+        , h1 []
+            [ Html.a [ Html.href "https://en.wikipedia.org/wiki/Wireworld" ]
+                [ Html.text "WireWorld" ]
+            , Html.text " in Elm "
+            ]
+        , div []
+            [ Html.a [ Html.href "https://github.com/krisajenkins/wireworld" ]
+                [ Html.text "(Source)" ]
+            ]
+        , circuitView model.world
+        , p [] [ Html.text "Click a cell to toggle it." ]
+        ]
 
 
 gridOf : List a -> List b -> List ( a, b )
