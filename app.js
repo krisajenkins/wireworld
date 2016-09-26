@@ -10057,7 +10057,7 @@ var _user$project$View$gridOf = F2(
 	});
 var _user$project$View$gridSizeY = 20;
 var _user$project$View$gridSizeX = 10;
-var _user$project$View$cellSize = 50;
+var _user$project$View$cellSize = 40;
 var _user$project$View$cellView = F2(
 	function (coord, cell) {
 		return A2(
