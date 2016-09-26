@@ -13,7 +13,7 @@ import Types exposing (..)
 
 cellSize : Int
 cellSize =
-    50
+    40
 
 
 gridSizeX : Int
