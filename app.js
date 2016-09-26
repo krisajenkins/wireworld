@@ -9737,27 +9737,27 @@ var _user$project$State$initialWorld = A2(
 		[
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 0, _1: 2},
+			_0: {ctor: '_Tuple2', _0: 2, _1: 0},
 			_1: _user$project$Types$Head
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 0, _1: 3},
+			_0: {ctor: '_Tuple2', _0: 3, _1: 0},
 			_1: _user$project$Types$Tail
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 0, _1: 4},
+			_0: {ctor: '_Tuple2', _0: 4, _1: 0},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 0, _1: 5},
+			_0: {ctor: '_Tuple2', _0: 5, _1: 0},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 0, _1: 6},
+			_0: {ctor: '_Tuple2', _0: 6, _1: 0},
 			_1: _user$project$Types$Conductor
 		},
 			{
@@ -9767,232 +9767,102 @@ var _user$project$State$initialWorld = A2(
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 1, _1: 7},
+			_0: {ctor: '_Tuple2', _0: 7, _1: 1},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 10, _1: 1},
+			_0: {ctor: '_Tuple2', _0: 1, _1: 10},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 10, _1: 7},
+			_0: {ctor: '_Tuple2', _0: 7, _1: 10},
 			_1: _user$project$Types$Tail
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 11, _1: 0},
+			_0: {ctor: '_Tuple2', _0: 0, _1: 11},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 11, _1: 2},
+			_0: {ctor: '_Tuple2', _0: 2, _1: 11},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 11, _1: 7},
+			_0: {ctor: '_Tuple2', _0: 7, _1: 11},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 12, _1: 0},
+			_0: {ctor: '_Tuple2', _0: 0, _1: 12},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 12, _1: 2},
+			_0: {ctor: '_Tuple2', _0: 2, _1: 12},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 12, _1: 7},
+			_0: {ctor: '_Tuple2', _0: 7, _1: 12},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 13, _1: 1},
+			_0: {ctor: '_Tuple2', _0: 1, _1: 13},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 13, _1: 7},
+			_0: {ctor: '_Tuple2', _0: 7, _1: 13},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 14, _1: 1},
+			_0: {ctor: '_Tuple2', _0: 1, _1: 14},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 14, _1: 7},
+			_0: {ctor: '_Tuple2', _0: 7, _1: 14},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 15, _1: 2},
+			_0: {ctor: '_Tuple2', _0: 2, _1: 15},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 15, _1: 3},
+			_0: {ctor: '_Tuple2', _0: 3, _1: 15},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 15, _1: 4},
+			_0: {ctor: '_Tuple2', _0: 4, _1: 15},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 15, _1: 5},
+			_0: {ctor: '_Tuple2', _0: 5, _1: 15},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 15, _1: 6},
+			_0: {ctor: '_Tuple2', _0: 6, _1: 15},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 2, _1: 1},
+			_0: {ctor: '_Tuple2', _0: 1, _1: 2},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 2, _1: 6},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 2, _1: 8},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 3, _1: 0},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 3, _1: 2},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 3, _1: 5},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 3, _1: 9},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 4, _1: 0},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 4, _1: 10},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 4, _1: 2},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 4, _1: 4},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 4, _1: 6},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 4, _1: 8},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 5, _1: 1},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 5, _1: 10},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 5, _1: 4},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 5, _1: 6},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 5, _1: 8},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 6, _1: 1},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 6, _1: 10},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 6, _1: 4},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 6, _1: 6},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 6, _1: 8},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 7, _1: 0},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 7, _1: 2},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 7, _1: 5},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 7, _1: 9},
-			_1: _user$project$Types$Conductor
-		},
-			{
-			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 8, _1: 0},
+			_0: {ctor: '_Tuple2', _0: 6, _1: 2},
 			_1: _user$project$Types$Conductor
 		},
 			{
@@ -10002,7 +9872,137 @@ var _user$project$State$initialWorld = A2(
 		},
 			{
 			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 0, _1: 3},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 2, _1: 3},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 5, _1: 3},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 9, _1: 3},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 0, _1: 4},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 10, _1: 4},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 2, _1: 4},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 4, _1: 4},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 6, _1: 4},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 8, _1: 4},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 1, _1: 5},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 10, _1: 5},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 4, _1: 5},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 6, _1: 5},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 8, _1: 5},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 1, _1: 6},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 10, _1: 6},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 4, _1: 6},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 6, _1: 6},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
 			_0: {ctor: '_Tuple2', _0: 8, _1: 6},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 0, _1: 7},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 2, _1: 7},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 5, _1: 7},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 9, _1: 7},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 0, _1: 8},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 2, _1: 8},
+			_1: _user$project$Types$Conductor
+		},
+			{
+			ctor: '_Tuple2',
+			_0: {ctor: '_Tuple2', _0: 6, _1: 8},
 			_1: _user$project$Types$Conductor
 		},
 			{
@@ -10012,12 +10012,12 @@ var _user$project$State$initialWorld = A2(
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 9, _1: 1},
+			_0: {ctor: '_Tuple2', _0: 1, _1: 9},
 			_1: _user$project$Types$Conductor
 		},
 			{
 			ctor: '_Tuple2',
-			_0: {ctor: '_Tuple2', _0: 9, _1: 7},
+			_0: {ctor: '_Tuple2', _0: 7, _1: 9},
 			_1: _user$project$Types$Head
 		}
 		]));
@@ -10055,8 +10055,8 @@ var _user$project$View$gridOf = F2(
 				},
 				xs));
 	});
-var _user$project$View$gridSizeY = 10;
-var _user$project$View$gridSizeX = 20;
+var _user$project$View$gridSizeY = 20;
+var _user$project$View$gridSizeX = 10;
 var _user$project$View$cellSize = 50;
 var _user$project$View$cellView = F2(
 	function (coord, cell) {
@@ -10092,7 +10092,7 @@ var _user$project$View$circuitView = function (world) {
 				_elm_lang$core$Basics$toString(_user$project$View$gridSizeX * _user$project$View$cellSize)),
 				_elm_lang$svg$Svg_Attributes$height(
 				_elm_lang$core$Basics$toString(_user$project$View$gridSizeY * _user$project$View$cellSize)),
-				_elm_lang$svg$Svg_Attributes$viewBox('0 0 1200 600')
+				_elm_lang$svg$Svg_Attributes$viewBox('0 0 600 1200')
 			]),
 		A2(
 			_elm_lang$core$List$map,
