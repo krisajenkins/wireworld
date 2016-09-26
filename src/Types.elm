@@ -1,6 +1,7 @@
 module Types exposing (..)
 
 import GenericDict exposing (GenericDict)
+import Time exposing (Time)
 
 
 type Cell
@@ -11,7 +12,8 @@ type Cell
 
 
 type Msg
-    = Tick
+    = Tick Time
+    | ToggleCell Coord
 
 
 type alias Coord =
