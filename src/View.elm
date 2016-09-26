@@ -18,12 +18,12 @@ cellSize =
 
 gridSizeX : Int
 gridSizeX =
-    20
+    10
 
 
 gridSizeY : Int
 gridSizeY =
-    10
+    20
 
 
 root : Model -> Html Msg
@@ -55,7 +55,7 @@ circuitView world =
     Keyed.node "svg"
         [ width (toString (gridSizeX * cellSize))
         , height (toString (gridSizeY * cellSize))
-        , viewBox "0 0 1200 600"
+        , viewBox "0 0 600 1200"
         ]
         (List.map
             (\coord ->
