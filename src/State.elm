@@ -1,14 +1,25 @@
 module State exposing (..)
 
-import Exts.Basics exposing (compareBy)
 import GenericDict
 import Time exposing (..)
 import Types exposing (..)
 
 
+compareCoord : Coord -> Coord -> Order
+compareCoord a b =
+    let
+        compareX =
+            compare (fst a) (fst b)
+    in
+        if compareX == EQ then
+            compare (snd a) (snd b)
+        else
+            compareX
+
+
 initialWorld : World
 initialWorld =
-    GenericDict.fromList (compareBy toString)
+    GenericDict.fromList compareCoord
         [ ( ( 2, 0 ), Head )
         , ( ( 3, 0 ), Tail )
         , ( ( 4, 0 ), Conductor )
