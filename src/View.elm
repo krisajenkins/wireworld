@@ -4,6 +4,7 @@ import CDN exposing (skeleton)
 import GenericDict exposing (GenericDict)
 import Html exposing (Html, div, code, text, h1, h3, p, span)
 import Html.Attributes as Html
+import Html.Events exposing (onInput)
 import Svg exposing (..)
 import Svg.Attributes exposing (..)
 import Svg.Events exposing (..)
@@ -34,6 +35,18 @@ root model =
             [ Html.a [ Html.href "https://en.wikipedia.org/wiki/Wireworld" ]
                 [ Html.text "WireWorld" ]
             , Html.text " in Elm "
+            ]
+        , p []
+            [ Html.label [ Html.for "speed" ]
+                [ Html.text <| "Update speed: " ++ toString model.tickingSpeed ]
+            , Html.input
+                [ Html.type' "range"
+                , Html.attribute "min" "1"
+                , Html.attribute "max" "11"
+                , Html.value <| toString model.tickingSpeed
+                , onInput UpdateTickingSpeed
+                ]
+                []
             ]
         , div []
             [ Html.a [ Html.href "https://github.com/krisajenkins/wireworld" ]

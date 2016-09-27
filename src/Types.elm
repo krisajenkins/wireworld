@@ -14,6 +14,7 @@ type Cell
 type Msg
     = Tick Time
     | ToggleCell Coord
+    | UpdateTickingSpeed String
 
 
 type alias Coord =
@@ -25,4 +26,6 @@ type alias World =
 
 
 type alias Model =
-    { world : World }
+    { world : World
+    , tickingSpeed : Int
+    }

@@ -1,5 +1,6 @@
 module State exposing (..)
 
+import String
 import GenericDict
 import Time exposing (..)
 import Types exposing (..)
@@ -82,14 +83,20 @@ initialWorld =
 
 initialState : ( Model, Cmd Msg )
 initialState =
-    ( { world = initialWorld }
+    ( { world = initialWorld
+      , tickingSpeed = 1
+      }
     , Cmd.none
     )
 
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
-    Time.every (50 * millisecond) Tick
+subscriptions { tickingSpeed } =
+    let
+        updateRate =
+            1 / (toFloat tickingSpeed) * 500
+    in
+        Time.every (updateRate * millisecond) Tick
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -104,6 +111,14 @@ update msg model =
             ( { model | world = GenericDict.update coord toggleCell model.world }
             , Cmd.none
             )
+
+        UpdateTickingSpeed speed ->
+            case String.toInt speed of
+                Err _ ->
+                    ( model, Cmd.none )
+
+                Ok newSpeed ->
+                    ( { model | tickingSpeed = newSpeed }, Cmd.none )
 
 
 toggleCell : Maybe Cell -> Maybe Cell
