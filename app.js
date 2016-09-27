@@ -8245,6 +8245,107 @@ var _elm_lang$html$Html_Attributes$classList = function (list) {
 };
 var _elm_lang$html$Html_Attributes$style = _elm_lang$virtual_dom$VirtualDom$style;
 
+var _elm_lang$html$Html_Events$keyCode = A2(_elm_lang$core$Json_Decode_ops[':='], 'keyCode', _elm_lang$core$Json_Decode$int);
+var _elm_lang$html$Html_Events$targetChecked = A2(
+	_elm_lang$core$Json_Decode$at,
+	_elm_lang$core$Native_List.fromArray(
+		['target', 'checked']),
+	_elm_lang$core$Json_Decode$bool);
+var _elm_lang$html$Html_Events$targetValue = A2(
+	_elm_lang$core$Json_Decode$at,
+	_elm_lang$core$Native_List.fromArray(
+		['target', 'value']),
+	_elm_lang$core$Json_Decode$string);
+var _elm_lang$html$Html_Events$defaultOptions = _elm_lang$virtual_dom$VirtualDom$defaultOptions;
+var _elm_lang$html$Html_Events$onWithOptions = _elm_lang$virtual_dom$VirtualDom$onWithOptions;
+var _elm_lang$html$Html_Events$on = _elm_lang$virtual_dom$VirtualDom$on;
+var _elm_lang$html$Html_Events$onFocus = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'focus',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onBlur = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'blur',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onSubmitOptions = _elm_lang$core$Native_Utils.update(
+	_elm_lang$html$Html_Events$defaultOptions,
+	{preventDefault: true});
+var _elm_lang$html$Html_Events$onSubmit = function (msg) {
+	return A3(
+		_elm_lang$html$Html_Events$onWithOptions,
+		'submit',
+		_elm_lang$html$Html_Events$onSubmitOptions,
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onCheck = function (tagger) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'change',
+		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$targetChecked));
+};
+var _elm_lang$html$Html_Events$onInput = function (tagger) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'input',
+		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$targetValue));
+};
+var _elm_lang$html$Html_Events$onMouseOut = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseout',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseOver = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseover',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseLeave = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseleave',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseEnter = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseenter',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseUp = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mouseup',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onMouseDown = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'mousedown',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onDoubleClick = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'dblclick',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$onClick = function (msg) {
+	return A2(
+		_elm_lang$html$Html_Events$on,
+		'click',
+		_elm_lang$core$Json_Decode$succeed(msg));
+};
+var _elm_lang$html$Html_Events$Options = F2(
+	function (a, b) {
+		return {stopPropagation: a, preventDefault: b};
+	});
+
 var _elm_lang$svg$Svg$text = _elm_lang$virtual_dom$VirtualDom$text;
 var _elm_lang$svg$Svg$svgNamespace = A2(
 	_elm_lang$virtual_dom$VirtualDom$property,
@@ -9605,13 +9706,17 @@ var _robertjlooby$elm_generic_dict$GenericDict$diff = F2(
 			t2);
 	});
 
-var _user$project$Types$Model = function (a) {
-	return {world: a};
-};
+var _user$project$Types$Model = F2(
+	function (a, b) {
+		return {world: a, tickingSpeed: b};
+	});
 var _user$project$Types$Conductor = {ctor: 'Conductor'};
 var _user$project$Types$Tail = {ctor: 'Tail'};
 var _user$project$Types$Head = {ctor: 'Head'};
 var _user$project$Types$Empty = {ctor: 'Empty'};
+var _user$project$Types$UpdateTickingSpeed = function (a) {
+	return {ctor: 'UpdateTickingSpeed', _0: a};
+};
 var _user$project$Types$ToggleCell = function (a) {
 	return {ctor: 'ToggleCell', _0: a};
 };
@@ -9682,33 +9787,49 @@ var _user$project$State$toggleCell = function (maybeCell) {
 var _user$project$State$update = F2(
 	function (msg, model) {
 		var _p7 = msg;
-		if (_p7.ctor === 'Tick') {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{
-						world: A2(
-							_robertjlooby$elm_generic_dict$GenericDict$map,
-							_user$project$State$tickCell(model.world),
-							model.world)
-					}),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
-		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{
-						world: A3(_robertjlooby$elm_generic_dict$GenericDict$update, _p7._0, _user$project$State$toggleCell, model.world)
-					}),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
+		switch (_p7.ctor) {
+			case 'Tick':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							world: A2(
+								_robertjlooby$elm_generic_dict$GenericDict$map,
+								_user$project$State$tickCell(model.world),
+								model.world)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			case 'ToggleCell':
+				return {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Native_Utils.update(
+						model,
+						{
+							world: A3(_robertjlooby$elm_generic_dict$GenericDict$update, _p7._0, _user$project$State$toggleCell, model.world)
+						}),
+					_1: _elm_lang$core$Platform_Cmd$none
+				};
+			default:
+				var _p8 = _elm_lang$core$String$toInt(_p7._0);
+				if (_p8.ctor === 'Err') {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{tickingSpeed: _p8._0}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
 		}
 	});
-var _user$project$State$subscriptions = function (model) {
-	return A2(_elm_lang$core$Time$every, 50 * _elm_lang$core$Time$millisecond, _user$project$Types$Tick);
+var _user$project$State$subscriptions = function (_p9) {
+	var _p10 = _p9;
+	var updateRate = (1 / _elm_lang$core$Basics$toFloat(_p10.tickingSpeed)) * 500;
+	return A2(_elm_lang$core$Time$every, updateRate * _elm_lang$core$Time$millisecond, _user$project$Types$Tick);
 };
 var _user$project$State$compareCoord = F2(
 	function (a, b) {
@@ -10014,7 +10135,7 @@ var _user$project$State$initialWorld = A2(
 		]));
 var _user$project$State$initialState = {
 	ctor: '_Tuple2',
-	_0: {world: _user$project$State$initialWorld},
+	_0: {world: _user$project$State$initialWorld, tickingSpeed: 1},
 	_1: _elm_lang$core$Platform_Cmd$none
 };
 
@@ -10130,6 +10251,40 @@ var _user$project$View$root = function (model) {
 								_elm_lang$html$Html$text('WireWorld')
 							])),
 						_elm_lang$html$Html$text(' in Elm ')
+					])),
+				A2(
+				_elm_lang$html$Html$p,
+				_elm_lang$core$Native_List.fromArray(
+					[]),
+				_elm_lang$core$Native_List.fromArray(
+					[
+						A2(
+						_elm_lang$html$Html$label,
+						_elm_lang$core$Native_List.fromArray(
+							[
+								_elm_lang$html$Html_Attributes$for('speed')
+							]),
+						_elm_lang$core$Native_List.fromArray(
+							[
+								_elm_lang$html$Html$text(
+								A2(
+									_elm_lang$core$Basics_ops['++'],
+									'Update speed: ',
+									_elm_lang$core$Basics$toString(model.tickingSpeed)))
+							])),
+						A2(
+						_elm_lang$html$Html$input,
+						_elm_lang$core$Native_List.fromArray(
+							[
+								_elm_lang$html$Html_Attributes$type$('range'),
+								A2(_elm_lang$html$Html_Attributes$attribute, 'min', '1'),
+								A2(_elm_lang$html$Html_Attributes$attribute, 'max', '11'),
+								_elm_lang$html$Html_Attributes$value(
+								_elm_lang$core$Basics$toString(model.tickingSpeed)),
+								_elm_lang$html$Html_Events$onInput(_user$project$Types$UpdateTickingSpeed)
+							]),
+						_elm_lang$core$Native_List.fromArray(
+							[]))
 					])),
 				A2(
 				_elm_lang$html$Html$div,
