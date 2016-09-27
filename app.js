@@ -8679,26 +8679,6 @@ var _krisajenkins$elm_cdn$CDN$bootstrap = {
 	js: _krisajenkins$elm_cdn$CDN$script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
 };
 
-var _krisajenkins$elm_exts$Exts_Basics$compareBy = F3(
-	function (f, a, b) {
-		return A2(
-			_elm_lang$core$Basics$compare,
-			f(a),
-			f(b));
-	});
-var _krisajenkins$elm_exts$Exts_Basics$maxBy = F3(
-	function (toComparable, x, y) {
-		return _elm_lang$core$Native_Utils.eq(
-			A3(_krisajenkins$elm_exts$Exts_Basics$compareBy, toComparable, x, y),
-			_elm_lang$core$Basics$LT) ? y : x;
-	});
-var _krisajenkins$elm_exts$Exts_Basics$minBy = F3(
-	function (toComparable, x, y) {
-		return _elm_lang$core$Native_Utils.eq(
-			A3(_krisajenkins$elm_exts$Exts_Basics$compareBy, toComparable, x, y),
-			_elm_lang$core$Basics$LT) ? x : y;
-	});
-
 var _robertjlooby$elm_generic_dict$GenericDict$foldr = F3(
 	function (f, acc, t) {
 		foldr:
@@ -9730,9 +9710,20 @@ var _user$project$State$update = F2(
 var _user$project$State$subscriptions = function (model) {
 	return A2(_elm_lang$core$Time$every, 50 * _elm_lang$core$Time$millisecond, _user$project$Types$Tick);
 };
+var _user$project$State$compareCoord = F2(
+	function (a, b) {
+		var compareX = A2(
+			_elm_lang$core$Basics$compare,
+			_elm_lang$core$Basics$fst(a),
+			_elm_lang$core$Basics$fst(b));
+		return _elm_lang$core$Native_Utils.eq(compareX, _elm_lang$core$Basics$EQ) ? A2(
+			_elm_lang$core$Basics$compare,
+			_elm_lang$core$Basics$snd(a),
+			_elm_lang$core$Basics$snd(b)) : compareX;
+	});
 var _user$project$State$initialWorld = A2(
 	_robertjlooby$elm_generic_dict$GenericDict$fromList,
-	_krisajenkins$elm_exts$Exts_Basics$compareBy(_elm_lang$core$Basics$toString),
+	_user$project$State$compareCoord,
 	_elm_lang$core$Native_List.fromArray(
 		[
 			{
